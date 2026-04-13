@@ -1,0 +1,75 @@
+---
+title: Dr. Matheus Pupulin - Urologista / Uteroscopia
+layout: "base.njk"
+cssPath: "/css/blog.css"
+eleventyImport:
+collections: ["post"]
+---
+{% include 'nav.njk' %}
+<header class="header">
+    <img class="tablet-desktop" src="../img/header-blog.png" alt="">
+    <img class="only-mobile" src="../img/header-blog-mob.png" alt="">
+  <div class="header-text">
+    <h1>
+      blog
+    </h1>
+  </div>
+</header>
+
+<h5>Confira nosso conteúdo preparado para você sobre Reprodução Humana.</h5>
+
+<section class="main" id="blog-posts">
+    {% set postsPerPage = 8 %}
+    {% for post in collections.post | reverse %}
+      <div class="blog-item{% if loop.index > postsPerPage %} hidden{% endif %}" data-index="{{ loop.index }}">
+        <a href="{{ post.url }}">
+          <img src="{{ post.data.thumbnail }}" alt="" loading="lazy" />
+          <div class="title">
+            <h3>{{ post.data.title }}</h3>
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="25" fill="#CEB8A3"/>
+              <path d="M32.3333 24L17.6666 24" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+              <path d="M25.8864 31.0216L31.9117 24.9982C32.0436 24.8678 32.1484 24.7124 32.2198 24.5412C32.2913 24.3701 32.3281 24.1864 32.3281 24.0009C32.3281 23.8153 32.2913 23.6317 32.2198 23.4605C32.1484 23.2893 32.0436 23.134 31.9117 23.0035L25.8864 16.9783" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a> 
+        </div>
+      </div>
+    {%- endfor %}
+  </section>
+
+  {% if collections.post | length > 8 %}
+  <div class="load-more-container">
+    <button id="load-more-btn" class="load-more-btn">
+      Ver mais posts
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  {% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const postsPerPage = 8;
+    let currentVisible = postsPerPage;
+    
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function() {
+        const hiddenPosts = document.querySelectorAll('.blog-item.hidden');
+        const postsToShow = Array.from(hiddenPosts).slice(0, postsPerPage);
+        
+        postsToShow.forEach(post => {
+          post.classList.remove('hidden');
+        });
+        
+        // Esconde o botão se não houver mais posts
+        if (document.querySelectorAll('.blog-item.hidden').length === 0) {
+          document.querySelector('.load-more-container').style.display = 'none';
+        }
+      });
+    }
+  });
+</script>
+
+{% include 'footer.njk' %}

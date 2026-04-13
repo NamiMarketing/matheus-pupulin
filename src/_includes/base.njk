@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dr. Matheus Pupulin. Urologista / Uteroscopia / Especialista em pedras nos rins e cálculos renais complexos"
+    />
+    <meta name="category" content="Urologista / Uteroscopia / Pedras nos rins / Cálculos renais complexos">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="{{ cssPath }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/ico/apple-touch-icon.png"
+    />
+    <link rel="icon" href="../img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/mxd6upx.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Matheus Pupulin",
+        "alternateName": "Dr. Matheus Pupulin",
+        "url": "https://drmatheuspupulin.com.br/",
+        "image": "https://drpupulin.com.br/img/dr-matheus-pupulin.jpg",
+        "medicalSpecialty": "Urologic",
+        "description": "Dr. Matheus Pupulin. Urologista especialista em pedras nos rins e cálculos renais complexos",
+        "identifier": "CRM-PR 33239",
+        "knowsLanguage": ["pt-BR"],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Professor Pedro Viriato Parigot de Souza, 600",
+            "addressLocality": "Curitiba",
+            "addressRegion": "PR",
+            "addressCountry": "BR",
+            "description": "Centro Médico ParkShopping Barigui"
+          }
+        ],
+        "telephone": "+55-41-97400-0607",
+        "sameAs": [
+          "https://www.instagram.com/matheus_pupulin_urologista/",
+          "https://www.doctoralia.com.br/matheus-henrique-lima-pupulin/urologista-cirurgiao-geral/curitiba"
+        ]
+      }
+    </script>
+
+    <title>{{ title }}</title>
+
+  </head>
+
+  <body>
+    <main>
+      {{ content | safe }}
+    </main>
+    <div class="whatsapp">
+      <a href="https://api.whatsapp.com/send?phone=5541974000607&text=Estava%20no%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+        <img src="../../img/whatsapp.png" class="whatsapp" alt="Icone do Whatsapp">
+      </a>
+    </div>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

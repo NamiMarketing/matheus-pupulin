@@ -1,0 +1,106 @@
+@use "./colors" as *;
+
+$mont: "Montserrat", sans-serif;
+$elza: "Montserrat", sans-serif;
+
+strong {
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body,
+#root {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: $elza;
+  overflow-x: hidden;
+  color: $azul-900;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    font-size: 1.6rem;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.only-mobile {
+  display: none !important;
+}
+.mobile-tablet{
+  display: none !important;
+}
+.only-tablet{
+  display: none !important;
+}
+@media screen and (max-width: 700px) {
+  .only-mobile {
+    display: inline-block !important;
+  }
+  .mobile-tablet{
+    display: inline-block !important;
+  }
+  .tablet-desktop{
+    display: none !important;
+  }
+  .only-desktop {
+    display: none !important;
+  }
+  .only-tablet{
+    display: none !important;
+  }
+}
+@media screen and (min-width:701px) and (max-width:1260px){
+  .mobile-tablet{
+    display: inline-block !important;
+  }
+  .only-desktop{
+    display: none !important;
+  }
+  .only-tablet{
+    display: inline-block !important;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  z-index: 10;
+  bottom: 30px;
+  right: 50px;
+  height: 55px;
+
+  @media screen and (max-width: 700px) {
+    right: 20px;
+  }
+}

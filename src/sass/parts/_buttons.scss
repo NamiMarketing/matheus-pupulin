@@ -1,0 +1,47 @@
+@use "./colors" as *;
+
+.blueButton {
+  background-color: $azul-500;
+  color: $azul-900;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: filter 0.2s;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  width: fit-content;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 1.5rem;
+    padding: 1.4rem 2.1rem 1.3rem;
+  }
+}
+
+.greenButton {
+  background-color: $verde;
+  color: $azul-900;
+  padding: 2rem 3.3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: filter 0.2s;
+  border-radius: 30px;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  z-index: 999;
+  width: fit-content;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 1.4rem;
+    padding: 1.4rem 2.1rem 1.3rem;
+  }
+}

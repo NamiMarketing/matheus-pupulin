@@ -1,0 +1,21 @@
+---
+title: Blog
+layout: "base.njk"
+cssPath: "/css/blog.css"
+eleventyImport:
+collections: ["post"]
+---
+{% include 'nav.njk' %}
+<div class="space"></div>
+
+<div class="picture">
+  <a href="/blog"><p>VOLTAR</p></a>
+  {% if thumbnail %}
+    <img src="{{ thumbnail }}" alt="" />
+  {% endif %} 
+</div>
+<section class="text">
+  {{ texto | markdown | safe }}
+</section>
+
+{% include 'footer.njk' %}
