@@ -95,14 +95,26 @@ header{
     display: flex;
     flex-direction: column;
     gap: 14rem;
-    padding: 13rem 0 11rem;
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1440px;
+    padding: 13rem 7% 11rem;
+    margin: 0;
+    position: relative;
+    .pedras-right{
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        z-index: 1;
+    }
+    .pedras-left{
+        position: absolute;
+        top: 60rem;
+        left: 0;
+        z-index: 1;
+    }
     .pedras-item{
         display: flex;
         align-items: center;
         gap: 10rem;
+        z-index: 2;
         .left-pedras{
             width: 50%;
             display: flex;
@@ -130,7 +142,7 @@ header{
         }
     }
     .pedras-item.invert{
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; 
     }
     .detalhe{
         display: flex;

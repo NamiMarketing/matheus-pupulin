@@ -1,0 +1,148 @@
+@use 'index' as *;
+
+.hero{
+    background-color: $background2;
+    aspect-ratio: 144/70;
+    
+    .container{
+        display: flex;
+        padding: 15rem 0 10rem;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    .left-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3.3rem;
+        h1{
+            color: $azul-300;
+            font-size: 4.4rem;
+            line-height: 1;
+            font-weight: 600;
+        }
+        .buttons{
+            display: flex;
+        }
+    }
+}
+
+.procedimento{
+    padding: 10rem 0;
+    .container{
+        width: 85%;
+        margin: 0 auto;
+        max-width: 1440px;
+        h2{
+            color: $azul-900;
+            font-size: 3rem;
+            line-height: 1;
+            font-weight: 600;
+            text-align: center;
+            width: 82rem;
+            margin: 0 auto 3.3rem;
+        }
+        >p{
+            color: $azul-900;
+            font-size: 2.2rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 8.8rem;
+            text-align: center;
+        }
+        .box-procedimento{
+            background-color: $branco;
+            border-radius: 30px;
+            padding: 6rem;
+            margin-bottom: 2.2rem;
+            h3{
+                color: $azul-900;
+                font-size: 3rem;
+                line-height: 1;
+                font-weight: 600;
+                margin-bottom: 4rem;
+            }
+            p{
+                color: $azul-900;
+                font-size: 2.2rem;
+                line-height: 1.5;
+                font-weight: 400;
+                margin-bottom: 2.3rem;
+            }
+            .item{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-bottom: 1rem;
+                svg{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+                p{
+                    color: $azul-900;
+                    font-size: 2.2rem;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .como{
+            margin-top: 9rem;
+            h2{
+                color: $azul-900;
+                font-size: 3rem;
+                line-height: 1;
+                font-weight: 600;
+                text-align: center;
+                width: 82rem;
+                margin: 0 auto 3.3rem;
+            }
+            >p{
+                color: $azul-900;
+                font-size: 2.2rem;
+                line-height: 1.5;
+                font-weight: 400;
+                margin-bottom: 8.8rem;
+                text-align: center;
+            } 
+        }
+    }
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    img{
+        width: 50.5rem;
+        height: 49.5rem;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+    .right-card{
+        width: 71.5rem;
+        background-color: $branco;
+        border-radius: 30px;
+        padding: 7.6rem 4rem;
+        height: 49.5rem;
+        p{
+            color: $azul-900;
+            font-size: 2.2rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 3.6rem;
+        }
+        h4{
+            color: $azul-900;
+            font-size: 2.2rem;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 3.7rem;
+        }
+    }
+}

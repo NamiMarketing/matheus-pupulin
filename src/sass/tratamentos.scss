@@ -1,0 +1,91 @@
+@use 'index' as *;
+
+.hero{
+    background-color: $background2;
+    aspect-ratio: 144/70;
+    position: relative;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20rem 0;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 1440px;
+        h1{
+            color: $azul-300;
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 600;
+        }
+        p{
+            color: $azul-300;
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            width: 61rem;
+        }
+    }
+    .container-img{
+        width: 85vw;
+        height: auto;
+        position: absolute;
+        bottom: -9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        .image{
+            width: 100%;
+            height: auto;
+        }
+        .back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 4;
+        }
+    }
+}
+
+.tratamentos{
+    width: 100%;
+    margin-top: -6rem;
+    border-radius: 50px 50px 0 0;
+    z-index: 2;
+    background-color: $background;
+    padding: 26rem 0 15rem;
+    .cards-tratamentos{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 1440px;
+        height: 100%;
+        .card{
+            width: 25rem;
+            display: grid;
+            grid-template-rows: 80px 1fr auto;
+            gap: 2.3rem;
+            align-items: flex-start;
+            h2{
+                color: $azul-900;
+                font-size: 2.4rem;
+                font-weight: 600;
+                line-height: 1;
+            }
+            .buttons{
+                display: flex;
+            }
+            .blueButton{
+                padding: 1.5rem 2.5rem;
+            }
+        }
+        .separator{
+            width: 1px;
+            background-color: $azul-900;
+            align-self: stretch;
+            content: "";
+        }
+    }
+}
