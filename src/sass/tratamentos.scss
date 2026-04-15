@@ -76,9 +76,9 @@
             }
             .buttons{
                 display: flex;
-            }
-            .blueButton{
-                padding: 1.5rem 2.5rem;
+                .blueButton{
+                    height: 5rem;
+                }
             }
         }
         .separator{

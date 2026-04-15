@@ -12,6 +12,7 @@
         width: 85%;
         margin: 0 auto;
         max-width: 1440px;
+        gap: 10rem;
     }
     .left-hero{
         display: flex;
@@ -26,6 +27,9 @@
         }
         .buttons{
             display: flex;
+            .greenButton{
+                height: 6rem;
+            }
         }
     }
 }

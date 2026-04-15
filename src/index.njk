@@ -9,7 +9,8 @@ collections: ["post"]
 {% include 'nav.njk' %}
 
 <header>
-  <img src="../img/header.png" alt="">
+  <img src="../img/header.png" class="tablet-desktop" alt="">
+  <img src="../img/header-mob.png" class="only-mobile" alt="">
   <div class="container">
     <img class="logo-header" src="../img/logo-header.png" alt="">
     <p>
@@ -44,8 +45,8 @@ collections: ["post"]
     </div>
   </div>
   <div class="buttons">
-    <a href="/tratamentos" class="btn-tratamentos greenButton">Ver tratamentos</a>
-    <a href="/tratamentos">
+    <a href="/tratamentos" class="greenButton">Ver tratamentos</a>
+    <a href="/tratamentos" class="btn-tratamentos">
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="30" cy="30" r="30" fill="#BFEDA6"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M40.6623 29.3374C40.8379 29.5132 40.9365 29.7515 40.9365 29.9999C40.9365 30.2484 40.8379 30.4867 40.6623 30.6624L33.1623 38.1624C33.0765 38.2546 32.973 38.3284 32.858 38.3797C32.743 38.4309 32.6189 38.4585 32.493 38.4607C32.3671 38.4629 32.2421 38.4398 32.1254 38.3926C32.0086 38.3454 31.9026 38.2753 31.8136 38.1862C31.7245 38.0972 31.6543 37.9912 31.6072 37.8744C31.56 37.7577 31.5369 37.6327 31.5391 37.5068C31.5413 37.3809 31.5689 37.2568 31.6201 37.1418C31.6714 37.0268 31.7452 36.9233 31.8373 36.8374L37.7373 30.9374L19.9998 30.9374C19.7512 30.9374 19.5128 30.8387 19.3369 30.6629C19.1611 30.487 19.0624 30.2486 19.0624 29.9999C19.0624 29.7513 19.1611 29.5129 19.3369 29.337C19.5128 29.1612 19.7512 29.0624 19.9999 29.0624L37.7373 29.0624L31.8373 23.1624C31.7452 23.0766 31.6714 22.9731 31.6201 22.8581C31.5689 22.7431 31.5413 22.619 31.5391 22.4931C31.5369 22.3672 31.56 22.2422 31.6072 22.1255C31.6543 22.0087 31.7245 21.9027 31.8136 21.8136C31.9026 21.7246 32.0086 21.6544 32.1254 21.6073C32.2421 21.5601 32.3671 21.537 32.493 21.5392C32.6189 21.5414 32.743 21.569 32.858 21.6202C32.973 21.6715 33.0765 21.7453 33.1623 21.8374L40.6623 29.3374Z" fill="#0A1F33"/>
@@ -110,11 +111,13 @@ collections: ["post"]
 
 <section class="matheus">
   <div class="container">
+    <img src="../img/pontos.png" class="pontos" alt="">
     <div class="left-matheus">
       <div class="title">
         <h2>Dr. Matheus Pupulin</h2>
         <p>CRM / PR 33239 &#8226 RQE 31700 &#8226 RQE 23641</p>
       </div>
+      <img src="../img/matheus.png" class="only-mobile" alt="">
       <div class="text">
         <p>
           <span>
@@ -146,7 +149,7 @@ collections: ["post"]
         </p>
       </div>
     </div>
-    <div class="right-matheus">
+    <div class="right-matheus tablet-desktop">
       <img src="../img/matheus.png" alt="">
     </div>
   </div>
@@ -286,7 +289,7 @@ collections: ["post"]
     breakpoints: {
       360: {
         slidesPerView: 'auto',
-        spaceBetween: 40,
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 'auto',

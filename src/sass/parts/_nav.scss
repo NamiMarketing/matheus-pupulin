@@ -41,11 +41,12 @@
   }
 
   @media screen and (max-width: 700px) {
-    padding: 2.2rem;
-
+    width: 85%;
+    margin: 1.8rem 7% 0;
+    padding: 2px 0rem 2px 7px;
     >a{
-      width: 4.4rem;
-      height: 4.2rem;
+      width: 3rem;
+      height: 3rem;
       margin: 0;
       img{
         width: 100%;
@@ -57,30 +58,18 @@
       position: relative;
       z-index: 1000;
       cursor: pointer;
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
     }
 
     .hamburger{
-      .navicon {
-      display: block;
-      height: 1px;
-      position: relative;
-      width: 2rem;
-    }
-    .navicon:before,
-    .navicon:after {
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all 0.2s ease-out;
-      width: 100%;
-    }
-    .navicon:before {
-      top: 5px;
-    }
-    .navicon:after {
-      top: -5px;
-    }
+      .abrir{
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: $bege;
+        font-weight: 500;
+      }
       .fechar{
         display: none;
       }
@@ -101,6 +90,7 @@
         font-size: 1.4rem;
         display: initial;
         animation: appear 0.5s ease-in;
+        color: $bege;
       }
     }
 

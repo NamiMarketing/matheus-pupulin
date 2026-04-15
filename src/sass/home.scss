@@ -6,6 +6,11 @@ header{
     >img{
         width: 100%;
         height: auto;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
     }
     .container{
         position: absolute;
@@ -25,11 +30,38 @@ header{
             color: $bege;
         }
     }
+    @media screen and (max-width:700px) {
+        aspect-ratio: 36/47;
+        position: relative;
+        >img{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            position: absolute;
+            top: 12.5rem;
+            left: 2.2rem;
+            transform: translateY(0%);
+            width: 23.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            .logo-header{
+                width: 100%;
+                height: auto;
+            }
+            p{
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $bege;
+            }
+        }
+    }
 }
 
 .tratamentos{
     background-color: $background2;
-    padding: 11rem 0rem 10rem 10rem;
+    padding: 11rem 7% 10rem 7%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -83,11 +115,60 @@ header{
     .buttons{
         display: flex;
         align-self: center;
+        .greenButton{
+            height: 6rem;
+        }
     }
     .tratamentos-back{
         position: absolute;
         top: 11rem;
         right: 0;
+    }
+    @media screen and (max-width:700px) {
+        padding: 7rem 7% 6rem;
+        gap: 1.6rem;
+        h1{
+            font-size: 2.6rem;
+        }
+        p{
+            font-size: 1.6rem;
+            width: 100%;
+        }
+        .cards-tratamentos{
+            flex-direction: column;
+            margin: 3rem 0 3rem;
+            .card{
+                width: 90%;
+                height: auto;
+                margin: auto;
+                border-radius: 20px;
+                h2{
+                    font-size: 1.7rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .buttons{
+            .greenButton{
+                height: 4rem;
+            }
+            .btn-tratamentos{
+                width: 4rem;
+                height: 4rem;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .tratamentos-back{
+            position: absolute;
+            top: 3rem;
+            right: 0;
+            width: 18rem;
+        }
     }
 }
 
@@ -184,6 +265,81 @@ header{
             }
         }
     }
+    @media screen and (max-width:700px) {
+        padding: 7.6rem 7% 6rem;
+        gap: 8.5rem;
+        .pedras-right{
+            top: 3.3rem;
+            width: 20rem;
+        }
+        .pedras-left{
+            top: 73rem;
+            width: 15rem;
+        }
+        .pedras-item{
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 3.5rem;
+            z-index: 2;
+            .left-pedras{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                h2{
+                    font-size: 2.4rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                    line-height: 2.1rem;
+                }
+            }
+            .right-pedras{
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .pedras-item.invert{
+            flex-direction: column-reverse; 
+        }
+        .detalhe{
+            display: flex;
+            flex-direction: column;
+            gap: 3.7rem;
+            h2{
+                font-size: 2.4rem;
+            }
+            .wrap-detalhe{
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+                .item-detalhe{
+                    width: 90%;
+                    margin: auto;
+                    display: grid;
+                    grid-template-rows: 50px 40px 1fr;
+                    gap: 1.5rem;
+                    justify-items: center;
+                    text-align: center;
+                    img{
+                        max-height: 5rem;
+                        max-width: 5.3rem;
+                    }
+                    h3{
+                        font-size: 1.8rem;
+                        width: 100%;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .matheus{
@@ -194,6 +350,12 @@ header{
     gap: 14rem;
     padding: 12rem 10rem 15rem;
     width: 100%;
+    position: relative;
+    .pontos{
+        position: absolute;
+        bottom: 1.2rem;
+        right: 1.2rem;
+    }
     .container{
         display: flex;
         align-items: center;
@@ -239,6 +401,48 @@ header{
             img{
                 width: 100%;
                 height: auto;
+            }
+        }
+    }
+    @media screen and (max-width:700px) {
+        border-radius: 30px;
+        padding: 7rem 7%;
+        .pontos{
+            position: absolute;
+            bottom: 7px;
+            right: 7px;
+            width: 7rem;
+        }
+        .container{
+            gap: 3.6rem;
+            .left-matheus{
+                gap: 3.6rem;
+                width: 100%;
+                .title{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    h2{
+                        font-size: 2.4rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    p{
+                        font-size: 1.6rem;
+                        line-height: 2.2rem;
+                        font-weight: 400;
+                        span{
+                            font-weight: 600;
+                            margin-bottom: 1.6rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -293,7 +497,7 @@ header{
             }
         }
     }
-    p{
+    >p{
         font-size: 2rem;
         line-height: 3rem;
         font-weight: 400;
@@ -304,6 +508,54 @@ header{
     }
     .blueButton{
         margin: 0 auto;
+    }
+    @media screen {
+        padding: 5rem 0 6rem 0;
+        .title{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 85%;
+            margin: 0 auto 3rem;
+            h1{
+                font-size: 2.4rem;
+            }
+            .buttons{
+                display: none;
+            }
+        }
+        .swiper1{
+            width: 100%;
+            margin-left: 7%;
+            overflow: hidden;
+            .swiper-wrapper{
+                width: 100%;
+                .swiper-slide{
+                    width: 233px;
+                    height: 262px;
+                    border-radius: 16px;
+                    position: relative;
+                    cursor: grab;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    p{
+                        position: absolute;
+                        bottom: 2rem;
+                        left: 2rem;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+        >p{
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            margin: 8rem auto 2.5rem;
+        }
     }
 }
 
@@ -367,6 +619,58 @@ header{
             }
         }
     }
+    @media screen and (max-width:700px) {
+        padding: 0rem 0 6rem 0;
+        .title{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 85%;
+            margin: 0 auto 3rem;
+            .left-title{
+                display: flex;
+                flex-direction: column;
+                gap: 1.3rem;
+                h1{
+                    font-size: 2.4rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+            .buttons{
+                gap: 1rem;
+                svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+        .swiper2{
+            width: 100%;
+            margin-left: 7%;
+            overflow: hidden;
+            .swiper-wrapper{
+                width: 100%;
+                .swiper-slide{
+                    width: 31.6rem;
+                    height: 38rem;
+                    border-radius: 20px;
+                    gap: 2.4rem;
+                    padding: 3rem;
+                    p{
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                    }
+                    h3{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .local{
@@ -404,4 +708,35 @@ header{
             color: $azul-900;
         }
     }
+    @media screen and (max-width:700px) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 1440px;
+        padding-bottom: 6rem;
+        .left-local{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .right-local{
+            width: 100%;
+            display: flex;
+            padding: 4.5rem 3rem;
+            gap: 2rem;
+            h1{
+                font-size: 2.4rem;
+                line-height: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
 }
+
