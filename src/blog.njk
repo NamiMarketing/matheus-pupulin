@@ -6,40 +6,43 @@ eleventyImport:
 collections: ["post"]
 ---
 {% include 'nav.njk' %}
-<header class="header">
-    <img class="tablet-desktop" src="../img/header-blog.png" alt="">
-    <img class="only-mobile" src="../img/header-blog-mob.png" alt="">
-  <div class="header-text">
-    <h1>
-      blog
-    </h1>
-  </div>
-</header>
-
-<h5>Confira nosso conteúdo preparado para você sobre Reprodução Humana.</h5>
+<section class="hero">
+    <div class="container">
+        <div class="left-hero">
+            <h1>Blog</h1>
+        </div>
+        <p>Conteúdos sobre pedra nos rins, tratamento de cálculos renais e saúde urológica.</p>
+    </div>
+</section>
 
 <section class="main" id="blog-posts">
     {% set postsPerPage = 8 %}
-    {% for post in collections.post | reverse %}
-      <div class="blog-item{% if loop.index > postsPerPage %} hidden{% endif %}" data-index="{{ loop.index }}">
-        <a href="{{ post.url }}">
-          <img src="{{ post.data.thumbnail }}" alt="" loading="lazy" />
-          <div class="title">
-            <h3>{{ post.data.title }}</h3>
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="25" r="25" fill="#CEB8A3"/>
-              <path d="M32.3333 24L17.6666 24" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-              <path d="M25.8864 31.0216L31.9117 24.9982C32.0436 24.8678 32.1484 24.7124 32.2198 24.5412C32.2913 24.3701 32.3281 24.1864 32.3281 24.0009C32.3281 23.8153 32.2913 23.6317 32.2198 23.4605C32.1484 23.2893 32.0436 23.134 31.9117 23.0035L25.8864 16.9783" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+    <div class="container">
+      {% for post in collections.post | reverse %}
+        <div class="blog-item{% if loop.index > postsPerPage %} hidden{% endif %}" data-index="{{ loop.index }}">
+          <a href="{{ post.url }}">
+            <img src="{{ post.data.thumbnail }}" alt="" loading="lazy" />
+            <div class="title">
+              <a href="{{ post.url }}">
+                <h3>{{ post.data.title }}</h3>
+                <div class="buttons">
+                  <p class="greenButton">Ler mais</p>
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="#BFEDA6"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.6623 29.3374C40.8379 29.5132 40.9365 29.7515 40.9365 29.9999C40.9365 30.2484 40.8379 30.4867 40.6623 30.6624L33.1623 38.1624C33.0765 38.2546 32.973 38.3284 32.858 38.3797C32.743 38.4309 32.6189 38.4585 32.493 38.4607C32.3671 38.4629 32.2421 38.4398 32.1254 38.3926C32.0086 38.3454 31.9026 38.2753 31.8136 38.1862C31.7245 38.0972 31.6543 37.9912 31.6072 37.8744C31.56 37.7577 31.5369 37.6327 31.5391 37.5068C31.5413 37.3809 31.5689 37.2568 31.6201 37.1418C31.6714 37.0268 31.7452 36.9233 31.8373 36.8374L37.7373 30.9374L19.9998 30.9374C19.7512 30.9374 19.5128 30.8387 19.3369 30.6629C19.1611 30.487 19.0624 30.2486 19.0624 29.9999C19.0624 29.7513 19.1611 29.5129 19.3369 29.337C19.5128 29.1612 19.7512 29.0624 19.9999 29.0624L37.7373 29.0624L31.8373 23.1624C31.7452 23.0766 31.6714 22.9731 31.6201 22.8581C31.5689 22.7431 31.5413 22.619 31.5391 22.4931C31.5369 22.3672 31.56 22.2422 31.6072 22.1255C31.6543 22.0087 31.7245 21.9027 31.8136 21.8136C31.9026 21.7246 32.0086 21.6544 32.1254 21.6073C32.2421 21.5601 32.3671 21.537 32.493 21.5392C32.6189 21.5414 32.743 21.569 32.858 21.6202C32.973 21.6715 33.0765 21.7453 33.1623 21.8374L40.6623 29.3374Z" fill="#0A1F33"/>
+                  </svg>
+                </div>
+              </a> 
+            </div>
           </a> 
         </div>
-      </div>
-    {%- endfor %}
+      {%- endfor %}
+    </div>
   </section>
 
   {% if collections.post | length > 8 %}
   <div class="load-more-container">
-    <button id="load-more-btn" class="load-more-btn">
+    <button id="load-more-btn" class="load-more-btn blueButton">
       Ver mais posts
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

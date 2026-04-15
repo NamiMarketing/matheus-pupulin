@@ -29,6 +29,29 @@
         letter-spacing: 0.5px;
         color: $azul-300;
     }
+    @media screen and (max-width:700px) {
+        aspect-ratio: 36/34;
+        
+        .container{
+            display: flex;
+            flex-direction: column;
+            padding: 12rem 0;
+            align-items: flex-start;
+            width: 85%;
+            gap: 2rem;
+        }
+        .left-hero{
+            width: 90%;
+            h1{
+                font-size: 2.3rem;
+            }
+        }
+        p{
+            width: 100%;
+            font-size: 1.6rem;
+            letter-spacing: 0.3px;
+        }
+    }
 }
 
 .contato{
@@ -71,5 +94,39 @@
         aspect-ratio: 1240/460;
         width: 100%;
         height: auto;
+    }
+    @media screen and (max-width:700px) {
+        padding: 5rem 0;
+        border-radius: 20px 20px 0 0;
+        .address{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 85%;
+            margin: auto;
+            .box{
+                border-radius: 20px;
+                padding: 3rem 2.2rem;
+                h1{
+                    font-size: 1.6rem;
+                    margin-bottom: 1.2rem;
+                }
+                p{
+                    color: $azul-900;
+                    font-size: 1.6rem;
+                    margin-bottom: 1.2rem;
+                }
+                .greenButton{
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+        iframe{
+            aspect-ratio: 316/260;
+            width: 85%;
+            height: auto;
+            margin: auto;
+            border-radius: 20px;
+        }
     }
 }
