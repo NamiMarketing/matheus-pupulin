@@ -62,6 +62,10 @@ module.exports = function (eleventyConfig) {
     },
   );
 
+  eleventyConfig.setServerOptions({
+    fallback: "_site/404.html"
+  });
+
   return {
     dir: {
       input: "src",
