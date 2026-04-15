@@ -15,9 +15,13 @@ footer {
       gap: 18rem;
       max-width: 1440px;
       margin: 0 auto;
-      >img{
+      >a{
         width: 42rem;
         height: auto;
+        img{
+          width: 100%;
+          height: 100%;
+        }
       }
       .right-footer{
         display: flex;
@@ -85,9 +89,13 @@ footer {
         padding-bottom: 4rem;
         align-items: center;
         gap: 5rem;
-        >img{
+        >a{
           width: 90%;
           height: auto;
+          img{
+            width: 100%;
+            height: 100%;
+          }
         }
         .right-footer{
           display: flex;
