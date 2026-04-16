@@ -24,7 +24,7 @@
       height: 100%;
     }
   }
-  ul {
+  .desktop-nav {
     display: flex;
     gap: 5rem;
     justify-content: flex-end;
@@ -39,12 +39,18 @@
         line-height: 100%;
         letter-spacing: 0.8px;
         color: $bege;
+        &.active {
+          color: $azul-900;
+        }
       }
       .lightBlueButton{
         font-weight: 600;
         color: $azul-900;
       }
     }
+  }
+  .mobile-nav{
+    display: none !important;
   }
 
   @media screen and (max-width: 700px) {
@@ -91,52 +97,99 @@
         display: none;
       }
       .fechar{
-        text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 2%;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         display: initial;
         animation: appear 0.5s ease-in;
         color: $bege;
       }
     }
+    label input:checked + .menu {
+      .lightBlueButton{
+        display: none !important;
+      }
+      .fechar{
+        display: none !important;
+      }
+    }
 
-    label ul {
+
+    label ul.desktop-nav {
       opacity: 0;
       display: none;
       animation: appear 0.5s ease-in;
     }
 
-    label input:checked + .menu + ul {
+    label input:checked ~ .mobile-nav {
       opacity: 1;
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: flex-start;
-      gap: 4vh;
+      justify-content: space-between;
       position: absolute;
-      top: 0;
-      width: 70vw;
-      right: 0;
+      top: -1.8rem;
+      width: 100vw;
+      right: -7.6vw;
       padding: 2.3rem 2.4rem 3.7rem;
-      height: 111vw;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+      background-color: $azul-900;
       z-index: 200;
-      border-radius: 30px 0px 0px 30px;
-      li{
-        a{
-          font-size: 1.6rem;
-          line-height: 1.6rem;
-          letter-spacing: 0%;
-          text-transform: none;
+      .nav-menu{
+        width: 100%;
+        background-color: #213d6926;
+        padding: 5px 20px 5px 7px;
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+          width: 3rem;
+          height: 3rem; 
+        }
+        .fechar{
+          font-weight: 600;
+          letter-spacing: 2%;
+          font-size: 1.5rem;
+          display: initial !important;
+          animation: appear 0.5s ease-in;
+          color: $bege;
+          cursor: pointer;
         }
       }
-      >img{
-        width: 14rem;
-        height: 13rem; 
-        position: absolute;
-        bottom: 0;
-        right: 0;
+      .nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+        li{
+          width: 87vw;
+          padding-bottom: 1.6rem;
+          border-bottom: 1px solid $azul-300;
+          a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+              font-size: 2rem;
+              line-height: 2rem;
+              letter-spacing: 0%;
+              text-transform: none;
+              color: $azul-300;
+            }
+            &.active {
+              p {
+                color: $azul-500;
+              }
+              svg path {
+                fill: $azul-500;
+              }
+            }
+          }
+        }
+      }
+      .agendar{
+        align-self: center;
       }
     }
 
@@ -209,6 +262,7 @@
     }
   }
 }
+
 .nav2 {
   width: 90%;
   margin: 2.5rem 5% 0;
@@ -224,7 +278,7 @@
   input {
     display: none;
   }
->a{
+  >a{
     width: 4.7rem;
     height: 4.7rem;
     img{
@@ -232,7 +286,7 @@
       height: 100%;
     }
   }
-  ul {
+  .desktop-nav {
     display: flex;
     gap: 5rem;
     justify-content: flex-end;
@@ -247,12 +301,18 @@
         line-height: 100%;
         letter-spacing: 0.8px;
         color: $bege;
+        &.active {
+          color: $azul-500;
+        }
       }
       .lightBlueButton{
         font-weight: 600;
         color: $azul-900;
       }
     }
+  }
+  .mobile-nav{
+    display: none !important;
   }
 
   @media screen and (max-width: 700px) {
@@ -299,52 +359,99 @@
         display: none;
       }
       .fechar{
-        text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 2%;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         display: initial;
         animation: appear 0.5s ease-in;
         color: $bege;
       }
     }
+    label input:checked + .menu {
+      .lightBlueButton{
+        display: none !important;
+      }
+      .fechar{
+        display: none !important;
+      }
+    }
 
-    label ul {
+
+    label .desktop-nav {
       opacity: 0;
       display: none;
       animation: appear 0.5s ease-in;
     }
 
-    label input:checked + .menu + ul {
+    label input:checked ~ .mobile-nav {
       opacity: 1;
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: flex-start;
-      gap: 4vh;
+      justify-content: space-between;
       position: absolute;
-      top: 0;
-      width: 70vw;
-      right: 0;
+      top: -1.8rem;
+      width: 100vw;
+      right: -7.6vw;
       padding: 2.3rem 2.4rem 3.7rem;
-      height: 111vw;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+      background-color: $azul-900;
       z-index: 200;
-      border-radius: 30px 0px 0px 30px;
-      li{
-        a{
-          font-size: 1.6rem;
-          line-height: 1.6rem;
-          letter-spacing: 0%;
-          text-transform: none;
+      .nav-menu{
+        width: 100%;
+        background-color: #213d6926;
+        padding: 5px 20px 5px 7px;
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+          width: 3rem;
+          height: 3rem; 
+        }
+        .fechar{
+          font-weight: 600;
+          letter-spacing: 2%;
+          font-size: 1.5rem;
+          display: initial !important;
+          animation: appear 0.5s ease-in;
+          color: $bege;
+          cursor: pointer;
         }
       }
-      >img{
-        width: 14rem;
-        height: 13rem; 
-        position: absolute;
-        bottom: 0;
-        right: 0;
+      .nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+        li{
+          width: 87vw;
+          padding-bottom: 1.6rem;
+          border-bottom: 1px solid $azul-300;
+          a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+              font-size: 2rem;
+              line-height: 2rem;
+              letter-spacing: 0%;
+              text-transform: none;
+              color: $azul-300;
+            }
+            &.active {
+              p {
+                color: $azul-500;
+              }
+              svg path {
+                fill: $azul-500;
+              }
+            }
+          }
+        }
+      }
+      .agendar{
+        align-self: center;
       }
     }
 
