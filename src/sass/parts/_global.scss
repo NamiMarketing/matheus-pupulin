@@ -106,3 +106,23 @@ button {
     width: 60px;
   }
 }
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtly animated main images */
+main img:not(.whatsapp, .logo) {
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
