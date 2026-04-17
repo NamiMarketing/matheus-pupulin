@@ -42,6 +42,9 @@
         &.active {
           color: $azul-900;
         }
+        &.inactive {
+          pointer-events: none;
+        }
       }
       .lightBlueButton{
         font-weight: 600;
@@ -303,6 +306,9 @@
         color: $bege;
         &.active {
           color: $azul-500;
+        }
+        &.inactive {
+          pointer-events: none;
         }
       }
       .lightBlueButton{
