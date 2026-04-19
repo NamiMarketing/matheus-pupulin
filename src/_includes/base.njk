@@ -83,7 +83,7 @@
       // Scroll animations
       document.addEventListener('DOMContentLoaded', () => {
         // Tagging all headings inside main
-        const headings = document.querySelectorAll('main h1, main h2');
+        const headings = document.querySelectorAll('main img');
         headings.forEach(h => h.classList.add('animate-on-scroll'));
 
         const observer = new IntersectionObserver((entries) => {
