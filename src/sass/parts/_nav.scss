@@ -188,6 +188,9 @@
                 fill: $azul-500;
               }
             }
+            &.inactive {
+              pointer-events: none;
+            }
           }
         }
       }
