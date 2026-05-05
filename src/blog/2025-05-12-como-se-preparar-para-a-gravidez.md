@@ -5,8 +5,6 @@ date: 2026-03-04T20:16:00.000+09:00
 tags: post
 thumbnail: /img/blog/blog1.png
 texto: >-
-  
-
   **Pedra nos rins: sinais que o seu corpo dá antes da crise** 
 
 
@@ -137,15 +135,9 @@ texto: >-
 
   * Beber água o suficiente. Para saber quanto, multiplique 35ml de água pelo seu peso corporal (em kg). Exemplo: se você pesa 70kg, o ideal é cerca de 2,45L de água por dia (70 x 35 = 2450ml)
 
-
-
   * Evitar excesso de sal
 
-
-
   * Equilibrar o consumo de proteína
-
-
 
   * Fazer acompanhamento médico quando necessário
 
@@ -153,14 +145,5 @@ texto: >-
   A dor intensa pode ser o momento mais marcante de uma pedra nos rins, mas não é o único sinal.
 
 
-  Se você já sentiu algo parecido com o que citamos neste conteúdo, agende uma consulta. 
-
-
-  Dr. Matheus Pupulin 
-
-
-  CRM-PR 33239
-
-
-  RQE 31700
+  Se você já sentiu algo parecido com o que citamos neste conteúdo, agende uma consulta.
 ---
