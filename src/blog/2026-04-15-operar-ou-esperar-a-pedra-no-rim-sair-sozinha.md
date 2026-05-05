@@ -3,8 +3,6 @@ title: Operar ou esperar a pedra no rim sair sozinha? 
 date: 2026-04-16T01:15:00.000+09:00
 thumbnail: /img/blog/202604_matheus-pupulin_blog-2_505x388.png
 texto: >-
-  
-
   **Operar ou esperar a pedra no rim sair sozinha?** 
 
 
@@ -97,13 +95,4 @@ texto: >-
 
 
   Agende uma consulta. Vamos avaliar seu caso, analisar seus exames e definir juntos o melhor caminho,  seja ele cirúrgico ou não.
-
-
-  Dr. Matheus Pupulin 
-
-
-  CRM-PR 33239
-
-
-  RQE 31700
 ---
