@@ -30,7 +30,7 @@
         color: $azul-300;
     }
     @media screen and (max-width:700px) {
-        aspect-ratio: 36/34;
+        aspect-ratio: 36/25;
         
         .container{
             display: flex;
@@ -38,12 +38,12 @@
             padding: 12rem 0;
             align-items: flex-start;
             width: 85%;
-            gap: 2rem;
+            gap: 3rem;
         }
         .left-hero{
             width: 90%;
             h1{
-                font-size: 2.3rem;
+                font-size: 3rem;
             }
         }
         p{
@@ -110,27 +110,46 @@
 
 
   @media screen and (max-width: 700px) {
-    width: 85%;
-    margin: 3rem auto;
+    width: 100%;
+    margin: -1rem 0;
+    padding: 0 7% 3rem;
     row-gap: 3rem;
-
-    .blog-item {
-      width: 100%;
-
-      img {
-        height: 100%;
-      }
-
-      .title {
-        a {
-          h3 {
-            font-size: 1.6rem;
-            line-height: 2.2rem;
-            font-weight: 600;
+    border-radius: 20px 20px 0 0 ;
+    .container{
+      padding: 4rem 0;
+      width: 90%;
+      .blog-item {
+        width: 100%;
+        gap: 2rem;
+  
+        img {
+          aspect-ratio: 316/220;
+          width: 100%;
+          height: auto;
+  
+        }
+  
+        .title {
+          a {
+            h3 {
+              font-size: 1.6rem;
+              line-height: 2.2rem;
+              font-weight: 500;
+            }
           }
+           .buttons{
+              .greenButton{
+                height: 4rem;
+              }
+              svg{
+                width: 4rem;
+                height: 4rem;
+              }
+            }
         }
       }
     }
+
   }
 
   @media screen and (min-width: 701px) and (max-width:1260px) {
