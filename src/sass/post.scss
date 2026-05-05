@@ -2,32 +2,27 @@
 
 .hero{
     background-color: $background2;
-    aspect-ratio: 144/70;
+    aspect-ratio: 144/74;
     position: relative;
     .container{
         display: flex;
-        align-items: center;
         justify-content: space-between;
         padding: 20rem 0;
         width: 85%;
         margin: 0 auto;
         max-width: 1440px;
         .left-hero{
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
             h1{
                 color: $azul-300;
-                font-size: 5rem;
-                line-height: 1;
+                font-size: 4rem;
+                line-height: 1.2;
                 font-weight: 600;
+                width: 63rem;
+                margin-top: 3rem;
             }
-            p{
-                color: $azul-300;
-                font-size: 2.4rem;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-                width: 61rem;
-            }
-        }
-        .right-hero{
             .buttons{
                 display: flex;
                 .greenButton{
@@ -37,25 +32,26 @@
                     filter: brightness(0.7);
                 }
             }
+            .continue{
+              display: flex;
+              align-items: center;
+              gap: 1.2rem;
+              font-size: 2rem;
+              font-weight: 400;
+              color: $azul-300;
+              svg{
+                margin-top: 3px;
+              }
+            }
         }
-    }
-    .container-img{
-        width: 85vw;
-        height: auto;
-        position: absolute;
-        bottom: -9rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
-        .image{
+        .picture{
+          max-width: 50.5rem;
+          aspect-ratio: 505/388;
+          img{
             width: 100%;
-            height: auto;
-        }
-        .back{
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 4;
+            height: 100%;
+            object-fit: cover;
+          }
         }
     }
     @media screen and (max-width:700px) {
@@ -104,43 +100,6 @@
             }
         }
     }
-}
-
-.picture {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 7rem auto 0;
-  gap: 2rem;
-
-  a {
-    align-self: self-start;
-    margin-left: 0;
-
-    p {
-      font-size: 1.3rem;
-    }
-  }
-
-  img {
-    width: 90vw;
-    max-width: 80rem;
-    aspect-ratio: 52/38;
-    object-fit: cover;
-  }
-
-  @media (max-width: 700px) {
-    margin-top: 3.3rem;
-
-    a {
-      margin: 0 5rem .6rem;
-    }
-
-    img {
-      width: 100vw;
-    }
-  }
 }
 
 .text {
