@@ -179,7 +179,7 @@
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 600;
       align-self: flex-start;
       line-height: 3rem;
@@ -192,6 +192,9 @@
     p {
       font-size: 1.6rem;
       line-height: 2.24rem;
+      strong{
+        font-size: 1.8rem;
+      }
     }
 
     li {
