@@ -1,4 +1,4 @@
-@use 'index' as *;
+7@use 'index' as *;
 
 .hero{
     background-color: $background2;
@@ -64,7 +64,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 5rem;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 85%;
     margin: 0 auto;
     padding: 9.4rem 0;
