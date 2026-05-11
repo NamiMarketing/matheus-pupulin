@@ -4,6 +4,7 @@
     background-color: $background2;
     aspect-ratio: 144/70;
     z-index: 1;
+    overflow: hidden;
     .container{
         display: flex;
         padding: 15rem 0 10rem;
@@ -13,6 +14,12 @@
         margin: 0 auto;
         max-width: 1440px;
         gap: 10rem;
+        min-height: 0;
+    }
+    >img, .container img{
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
     .left-hero{
         display: flex;
@@ -47,6 +54,7 @@
             width: 85%;
             margin: 0 auto;
             gap: 4rem;
+            min-height: 0;
         }
         .left-hero{
             display: flex;
@@ -69,6 +77,8 @@
         }
         img{
             width: 100%;
+            height: auto;
+            object-fit: contain;
         }
     }
 }
