@@ -3,9 +3,8 @@ title: "Dor nos rins: quando ir ao hospital"
 date: 2026-05-13T16:48:00.000-03:00
 thumbnail: /img/blog/202605_matheus-pupulin_blog_505x388-2-.png
 texto: >-
-  
-
-  **Dor no rim: devo ir à emergência ou apenas marcar consulta com um especialista?**
+  **Dor no rim: devo ir à emergência ou apenas marcar consulta com um
+  especialista?**
 
 
   Sentiu uma dor forte nas costas, na região abaixo das costelas, e ficou sem saber o que fazer? Deve ir para a emergência, esperar passar ou marcar uma consulta?
@@ -138,13 +137,4 @@ texto: >-
 
 
   Se você está sentindo dor lombar ou já teve episódios de pedra no rim e quer entender melhor o seu caso, agende uma consulta. Vamos avaliar juntos e definir o caminho certo para você.
-
-
-  Dr. Matheus Pupulin 
-
-
-  CRM-PR 33239
-
-
-  RQE 31700
 ---
